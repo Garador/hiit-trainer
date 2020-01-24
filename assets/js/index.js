@@ -26,13 +26,12 @@ $(document).ready(() => {
             rotate: el.getAttribute('data-rotate') || 0,
             color: el.getAttribute('data-color') || '#fff'
         }
-        var canvas = document.createElement('canvas');
+        var canvas = document.getElementById('graph').querySelector("canvas") || document.createElement('canvas');
         var span = document.createElement('span');
         //span.textContent = options.percent + '%';
         if (typeof (G_vmlCanvasManager) !== 'undefined') {
             G_vmlCanvasManager.initElement(canvas);
         }
-
         var ctx = canvas.getContext('2d');
         canvas.width = canvas.height = options.size;
 
@@ -154,9 +153,15 @@ $(document).ready(() => {
         if (evt.key === 'SoftLeft') {
 
         } else if (evt.key === 'SoftRight') {
-            window.stopInterval();
+            if(start){
+                window.stopInterval();
+            }
         } else if (evt.key === 'Enter') {
-            window.startInterval();
+            if(!start){
+                window.startInterval();
+            }else{
+                window.stopInterval();
+            }
         }
     });
 
