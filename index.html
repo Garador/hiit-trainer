@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiit Counter</title>
     <link rel="stylesheet" href="assets/css/softkey.css">
-    <link rel="stylesheet" href="assets/css/skeleton.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <script type="text/javascript" src="assets/js/jquery-3.4.1.slim.min.js"></script>
     <script type="text/javascript" src="assets/js/dexie.min.js"></script>
@@ -14,80 +13,43 @@
 </head>
 
 <body>
-    <table class="u-full-width hiit-table">
-        <tbody>
-            <tr>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            -
-                        </div>
-                    </div>
-                </td>
-                <td class="display-qty-cell">
-                    <div>
-                        <div class="aspect-title">REST</div>
-                        <div class="aspect-ammount">26</div>
-                    </div>
-                </td>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            +
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            -
-                        </div>
-                    </div>
-                </td>
-                <td class="display-qty-cell">
-                    <div>
-                        <div class="aspect-title">REPS</div>
-                        <div class="aspect-ammount">26</div>
-                    </div>
-                </td>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            +
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            -
-                        </div>
-                    </div>
-                </td>
-                <td class="display-qty-cell">
-                    <div>
-                        <div class="aspect-title">TIMES</div>
-                        <div class="aspect-ammount">26</div>
-                    </div>
-                </td>
-                <td class="change-cell">
-                    <div>
-                        <div>
-                            +
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div id="softkey">
-        <div id="left"></div>
-        <div id="center">Start</div>
-        <div id="right"></div>
+    <div class="container">
+        <form action="" id="set">
+            <div class="section">
+                <div class="center button-group">
+                    <label>Rest </label>
+                    <div class="input"><button type="button" onclick="changeQty('rest','minus'); return false;">-</button><input
+                            type="text" id="rest" value="5" readonly><button  type="button"
+                            onclick="changeQty('rest','plus'); return false;">+</button></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="center button-group">
+                    <label>Reps </label>
+                    <div class="input"><button type="button" onclick="changeQty('workout','minus'); return false;">-</button><input
+                            type="text" id="workout" value="5" readonly><button  type="button"
+                            onclick="changeQty('workout','plus'); return false;">+</button></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="center button-group">
+                    <label>Times </label>
+                    <div class="input"><button type="button" onclick="changeQty('intervals','minus'); return false;">-</button><input
+                            type="text" id="intervals" value="2" readonly><button  type="button"
+                            onclick="changeQty('intervals','plus'); return false;">+</button></div>
+                </div>
+            </div>
+            <div class="buttons"><button id="start">start</button></div>
+        </form>
+
+        <div id="run">
+            <div class="chart" id="graph" data-percent="1" data-line="5" data-color="#34495e"></div>
+            <div id="title"></div>
+            <div id="timer"></div>
+            <div id="buttons">
+                <button id="stop">Stop</button>
+            </div>
+        </div>
     </div>
 </body>
 

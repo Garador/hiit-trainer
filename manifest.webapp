@@ -1,28 +1,28 @@
 {
   "version": "1.0.0",
-  "name": "Wack a Dino",
-  "short_name": "Wack-a-Dino",
-  "description": "Wack-a-Dino is a small game where you're running against the clock to wack as many dinos as fast as you can!",
-  "subtitle": "Wack the Dinos",
+  "name": "HII Trainer",
+  "short_name": "HII Trainer",
+  "description": "The HII Trainer (High Intensity Interval Trainer) is your new training companion which will help you in your trainings by counting your resting time, repetition and sets in a seamless and quick way",
+  "subtitle": "HII Trainer",
   "type": "web",
   "fullscreen": "true",
   "categories": [
     "life style",
-    "entertainment"
+    "sport"
   ],
   "launch_path": "/index.html",
   "icons": {
     "56": "/icons/icon56x56.png",
     "112": "/icons/icon112x112.png"
   },
-  "theme_color": "#d46911",
+  "theme_color": "#242424",
   "default_locale": "en-US",
   "locales": {
     "en-US": {
-      "name": "Wack a Dino",
-      "short_name": "Wack-a-Dino",
-      "description": "Wack-a-Dino is a small game where you're running against the clock to wack as many dinos as fast as you can!",
-      "subtitle": "Wack the Dinos"
+      "name": "HII Trainer",
+      "short_name": "HII Trainer",
+      "description": "The HII Trainer (High Intensity Interval Trainer) is your new training companion which will help you in your trainings by counting your resting time, repetition and sets in a seamless and quick way",
+      "subtitle": "HII Trainer"
     }
   }
 }
